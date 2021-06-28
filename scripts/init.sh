@@ -77,7 +77,7 @@ if [ ! -f $CWD/ietf/settings_local.py ]; then
     cp $CWD/docker/settings_local.py $CWD/ietf/settings_local.py
 fi
 
-for sub in test/id/ test/staging/ test/archive/ test/rfc test/media test/wiki/ietf; do
+for sub in test/id/ test/staging/ test/archive/ test/rfc test/media test/media/photo test/wiki/ietf; do
     dir="$CWD/$sub"
     if [ ! -d "$dir"  ]; then
 	echo "Creating dir $dir"
