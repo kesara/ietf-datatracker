@@ -130,6 +130,7 @@ chmod -R g+w   /usr/local/lib/		# so we can patch libs if needed
 cd "$CWD"
 
 echo "Running tests"
+ietf/manage.py test --settings=settings_sqlitetest # does patching
 ietf/manage.py test --settings=settings_sqlitetest
 
 exit
