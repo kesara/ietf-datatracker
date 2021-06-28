@@ -1,0 +1,10 @@
+---
+services:
+  - docker
+
+env:
+  global:
+    - CODEDIR=7.33.0.dev0
+
+script:
+  - scripts/setup-snapshot.sh
