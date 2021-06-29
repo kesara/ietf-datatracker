@@ -130,7 +130,7 @@ chmod -R g+w   /usr/local/lib/		# so we can patch libs if needed
 cd "$CWD"
 
 echo "Running tests"
-ietf/manage.py test --settings=settings_sqlitetest # does patching
+ietf/manage.py check --settings=settings_sqlitetest # does patching
 export LANG=en_US.UTF-8; ietf/manage.py test --settings=settings_sqlitetest --skip-coverage ietf.meeting.tests_views.MaterialsTests.test_upload_minutes_agenda
 
 exit
