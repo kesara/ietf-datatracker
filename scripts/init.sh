@@ -124,7 +124,7 @@ chmod -R g+w   /usr/local/lib/		# so we can patch libs if needed
 cd "$CWD"
 
 echo "Patching django"
-ietf/manage.py check
+ietf/manage.py check --settings=settings_sqlitetest
 
 echo "Running tests"
 ietf/manage.py test --settings=settings_sqlitetest --skip-coverage
