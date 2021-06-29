@@ -68,6 +68,7 @@ if ! $VIRTDIR/bin/python -c "import django"; then
     else
         echo "   Didn't find $reqs"
         echo "   Using /usr/local/share/datatracker/requirements.txt"
+        cat /usr/local/share/datatracker/requirements.txt
         pip install -r /usr/local/share/datatracker/requirements.txt
     fi
 fi
