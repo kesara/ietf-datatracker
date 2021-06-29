@@ -61,7 +61,12 @@ echo "Activating the virtual python environment ..."
 if ! $VIRTDIR/bin/python -c "import django"; then
     echo "Installing requirements ..."
     pip install --upgrade pip
-    reqs=/home/$USER/$CWD/requirements.txt
+    ls $CWD
+    echo '===='
+    pwd
+    ls
+    echo '===='
+    reqs=$CWD/requirements.txt
     if [ ! -f $reqs ]; then
         echo "   Using $reqs"
         pip install -r $reqs
