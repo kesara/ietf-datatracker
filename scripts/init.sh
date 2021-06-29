@@ -61,21 +61,9 @@ echo "Activating the virtual python environment ..."
 if ! $VIRTDIR/bin/python -c "import django"; then
     echo "Installing requirements ..."
     pip install --upgrade pip
-    ls $CWD
-    echo '===='
-    pwd
-    ls
-    echo '===='
     reqs=$CWD/requirements.txt
-    if [ ! -f $reqs ]; then
-        echo "   Using $reqs"
-        pip install -r $reqs
-    else
-        echo "   Didn't find $reqs"
-        echo "   Using /usr/local/share/datatracker/requirements.txt"
-        cat /usr/local/share/datatracker/requirements.txt
-        pip install -r /usr/local/share/datatracker/requirements.txt
-    fi
+    echo "   Using $reqs"
+    pip install -r $reqs
 fi
 
 if [ ! -f $CWD/ietf/settings_local.py ]; then
